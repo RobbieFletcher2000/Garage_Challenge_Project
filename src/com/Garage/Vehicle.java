@@ -9,6 +9,8 @@ public class Vehicle {
 	private int numOfSeats;
 	private int vehicleID;
 	private String vehicleType;
+	
+	
 	public Vehicle() {
 		super();
 	}
@@ -89,18 +91,30 @@ public class Vehicle {
 	}
 	
     public void print() {
-    	System.out.print("\nVehicle ID: ");
-		System.out.println(this.getVehicleID());
-		System.out.println("Vehicle Type: ");
-		System.out.print(this.getVehicleType());
-		System.out.print("\nVehicle Name: ");
-		System.out.println(this.getVehicleName());
-		System.out.print("Number of Seats: ");
-		System.out.println(this.getNumOfSeats());
-		System.out.print("Colour: ");
-		System.out.println(this.getVehicleColour());
-		System.out.print("Number of Wheels: ");
-		System.out.println(this.getNumOfWheels());
+    	
+    	if (vehicleType == "Car") {
+			Car manager = new Car();
+			manager.print();
+			
+		}
+    	else if (vehicleType == "Motorbike") {
+    		Motorbike manager = new Motorbike();
+    		manager.print();
+    		
+    	}
+    	else if (vehicleType == "Plane") {
+    		Plane manager = new Plane();
+    		manager.print();
+    		
+    	}
+    	else
+    	
+    	System.out.print("\nVEHICLE DOES NOT EXIST");
+		
+		
+		
+		
+		
 		
 	}
 	
